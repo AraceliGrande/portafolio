@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import LightTrails from "./LightTrails";
 import "./Hero.css";
+import heroImg from "../assets/heroimg.png";
 
 export default function Hero() {
   return (
@@ -36,7 +37,7 @@ export default function Hero() {
           transition={{ duration: 1 }}
         >
           <img
-            src="/heroimg.png"
+            src={heroImg}
             alt="Imagen principal"
             className="hero-image"
           />

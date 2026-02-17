@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Header.css";
+import ICOimg from "../assets/portafolioICO.svg";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -8,7 +9,7 @@ export default function Header() {
     <header className="header">
       <a href="#hero" className="title-link">
         <h1 className="title">
-          <img src="/portafolio.svg" alt="Logo" className="title-icon" />
+          <img  src={ICOimg} alt="Logo" className="title-icon" />
           Araceli Grande.
           <span className="dot"> Mi portafolio</span>
         </h1>
