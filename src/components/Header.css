@@ -1,0 +1,163 @@
+/* ======================== */
+/* HEADER                   */
+/* ======================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 10px 20px;
+  background: rgba(250, 250, 250, 0.7);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 300;
+}
+
+.title-link {
+  text-decoration: none;
+  color: inherit;   /* mantiene el color del h1 */
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+.title-icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+/* ======================== */
+/* NAV DESKTOP              */
+/* ======================== */
+
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.header-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent-strong);
+  transition: width 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: var(--accent-strong);
+}
+
+.header-nav a:hover::after {
+  width: 100%;
+}
+
+/* ======================== */
+/* TOGGLE MOBILE            */
+/* ======================== */
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 400;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--accent-middle);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ======================== */
+/* NAV MOBILE FULLSCREEN    */
+/* ======================== */
+
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  background: rgba(250, 250, 250, 0.98);
+  backdrop-filter: blur(18px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+
+  z-index: 200;
+}
+
+/* Estado abierto */
+.nav-mobile.open {
+  transform: translateY(0);
+}
+
+.nav-mobile a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 22px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.nav-mobile a:hover {
+  color: var(--accent-strong);
+  transform: translateY(-3px);
+}
+
+/* ======================== */
+/* MEDIA QUERY HEADER       */
+/* ======================== */
+
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .dot {
+    display: none;
+  }
+}

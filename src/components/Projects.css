@@ -1,0 +1,227 @@
+/* ============================= */
+/* SECTION */
+/* ============================= */
+
+.projects-section {
+  margin: 0 auto;
+}
+
+/* ============================= */
+/* TIMELINE */
+/* ============================= */
+
+.timeline {
+  position: relative;
+  margin-top: 80px;
+  padding-left: 70px;
+}
+
+/* Línea vertical */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--accent-soft);
+  border-radius: 2px;
+}
+
+/* ============================= */
+/* ITEM */
+/* ============================= */
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+/* Punto */
+.timeline-dot {
+  position: absolute;
+  left: -48px;
+  top: 35px;
+  width: 14px;
+  height: 14px;
+  background: var(--accent-middle);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.05);
+}
+
+/* ============================= */
+/* CARD CONTENEDORA */
+/* ============================= */
+
+.project-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 22px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Año */
+.project-year {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--accent-middle);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Título */
+.project-title {
+  font-size: 1.1rem;
+  font-weight: 650;
+  margin: 4px 0 10px 0;
+  letter-spacing: 0.4px;
+}
+
+/* ============================= */
+/* GRID INTERNO */
+/* ============================= */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  align-items: start;
+}
+
+/* ============================= */
+/* LADO IZQUIERDO */
+/* ============================= */
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Resumen destacado */
+.project-summary {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+/* Descripción */
+.project-desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  line-height: 1.6;
+  margin: 10px 0;
+  color: #333;
+}
+
+
+
+/* ============================= */
+/* TECNOLOGÍAS */
+/* ============================= */
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tech-tag {
+  padding: 5px 12px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 0.7rem;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.tech-tag:hover {
+  background: var(--accent-middle);
+  color: #000;
+}
+
+/* ============================= */
+/* VIDEO */
+/* ============================= */
+
+.video-wrapper {
+  width: 620px;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 160px;
+  border-radius: 14px;
+  border: none;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease;
+}
+
+.video-wrapper iframe:hover {
+  transform: scale(1.02);
+}
+
+/* ============================= */
+/* BOTÓN */
+/* ============================= */
+
+.repo-btn {
+  width: fit-content;
+  padding: 6px 26px;
+  border-radius: 20px;
+  background: var(--accent-middle);
+  color: #000;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-decoration: none;
+  transition: 0.2s ease;
+  margin-top: 25px;
+}
+
+.repo-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 1100px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .video-wrapper iframe {
+    height: 230px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 45px;
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-dot {
+    left: -30px;
+  }
+
+  .project-card {
+    padding: 24px;
+  }
+}
