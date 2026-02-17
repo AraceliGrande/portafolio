@@ -5,6 +5,15 @@ import ICOimg from "../assets/portafolioICO.svg";
 export default function Header() {
   const [open, setOpen] = useState(false);
 
+  // Función para hacer scroll a una sección
+  const handleScroll = (id: string): void => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setOpen(false);
+  };
+
   return (
     <header className="header">
       <a href="#hero" className="title-link">
@@ -33,10 +42,11 @@ export default function Header() {
       </div>
 
       {/* Menú móvil */}
+       {/* Menú móvil */}
       <nav className={`nav-mobile ${open ? "open" : ""}`}>
-        <a href="#about" onClick={() => setOpen(false)}>Sobre mí</a>
-        <a href="#projects" onClick={() => setOpen(false)}>Proyectos</a>
-        <a href="#contact" onClick={() => setOpen(false)}>Contacto</a>
+        <a onClick={() => handleScroll("about")}>Sobre mí</a>
+        <a onClick={() => handleScroll("projects")}>Proyectos</a>
+        <a onClick={() => handleScroll("contact")}>Contacto</a>
       </nav>
     </header>
   );

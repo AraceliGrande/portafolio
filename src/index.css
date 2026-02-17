@@ -80,7 +80,6 @@ html, body {
   padding: 0 16px;
 }
 
-
 #hero {
   scroll-margin-top: 80px;
 }
@@ -93,12 +92,13 @@ html, body {
   color: var(--accent-strong);
 }
 
+
 /* ======================== */
 /* FOOTER                   */
 .footer {
   text-align: center;
-  padding: 40px 0;
-  font-size: 14px;
+  padding: 15px 0;
+  font-size: 11px;
   color: var(--text-soft);
 }
 

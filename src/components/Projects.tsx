@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import "./Projects.css";
 
 interface Project {
-  year: string;
+  year?: string;
   title: string;
   summary: string;
   desc: string;
@@ -14,7 +14,6 @@ interface Project {
 export default function Projects() {
   const projects: Project[] = [
     {
-      year: "2024",
       title: "Tripper",
       summary:
         "Aplicación web para planificación y organización inteligente de viajes.",
@@ -24,7 +23,6 @@ export default function Projects() {
       tech: ["React", "TypeScript", "Node.js", "MongoDB"]
     },
     {
-      year: "2025",
       title: "Sistema - Fábrica de Pastas",
       summary:
         "Sistema de gestión interna para optimizar producción y administración.",
