@@ -4,7 +4,7 @@ export default function Contact() {
        <h3 className="sectionTitle">Contacto</h3>
       <div className="animated-divider" />
       <p>
-        Podés comunicarte:
+        Podés escribirme a:
         <strong> aracelitamaragrande22@gmail.com</strong>
       </p>
     </section>
