@@ -30,7 +30,7 @@ export default function Projects() {
         "Desarrollado para organizar pedidos, controlar inventario y dar seguimiento a la producción diaria de manera eficiente.",
       video: "https://www.canva.com/design/DAG4g9AU8vA/3hPpoR-6PMI4Sf-p25XzbQ/view?embed",
       repo: "https://github.com/AraceliGrande/FIDELANDIA..git",
-      tech: [".net", "#C", "MySQL"]
+      tech: [".NET", "#C", "MySQL"]
     }
   ];
 
