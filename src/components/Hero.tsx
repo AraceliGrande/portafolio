@@ -25,7 +25,7 @@ export default function Hero() {
           </h2>
 
           <p className="hero-description">
-            En este sitio comparto los proyectos que he desarrollado y mi
+            En este sitio comparto algunos de los proyectos que he desarrollado y mi
             repositorio de trabajos personales.
           </p>
         </motion.div>

@@ -2,19 +2,6 @@
 /* HEADER                   */
 /* ======================== */
 
-.header {
-  position: sticky;
-  top: 0;
-  padding: 10px 20px;
-  background: rgba(250, 250, 250, 0.7);
-  backdrop-filter: blur(12px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  z-index: 300;
-}
-
 .title-link {
   text-decoration: none;
   color: inherit;   /* mantiene el color del h1 */
